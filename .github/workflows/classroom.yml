@@ -28,7 +28,7 @@ jobs:
         command: 'ls .github/workflows/welcome.yml'
         input: ''
         expected-output: 'welcome.yml'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for workflow name
@@ -39,7 +39,7 @@ jobs:
         command: 'grep "name:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'name:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for pull_request event
@@ -50,7 +50,7 @@ jobs:
         command: 'grep "pull_request:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'pull_request:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for types filter
@@ -61,7 +61,7 @@ jobs:
         command: 'grep "types:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'types:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for permissions
@@ -72,7 +72,7 @@ jobs:
         command: 'grep -E "pull-requests: write|issues: write" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'write'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for jobs section
@@ -83,7 +83,7 @@ jobs:
         command: 'grep "jobs:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'jobs:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for welcome job
@@ -94,7 +94,7 @@ jobs:
         command: 'grep "welcome:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'welcome:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for runs-on
@@ -105,7 +105,7 @@ jobs:
         command: 'grep "runs-on: ubuntu-latest" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'runs-on: ubuntu-latest'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for steps section
@@ -116,7 +116,7 @@ jobs:
         command: 'grep "steps:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'steps:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for gh pr comment
@@ -127,7 +127,7 @@ jobs:
         command: 'grep "gh pr comment" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'gh pr comment'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for GITHUB_TOKEN
@@ -138,7 +138,7 @@ jobs:
         command: 'grep "GITHUB_TOKEN:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'GITHUB_TOKEN:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Check for PR_URL
@@ -149,7 +149,7 @@ jobs:
         command: 'grep "PR_URL:" .github/workflows/welcome.yml'
         input: ''
         expected-output: 'PR_URL:'
-        comparison-method: 'included'
+        comparison-method: 'contains'
         max-score: 1
 
     - name: Autograding Reporter

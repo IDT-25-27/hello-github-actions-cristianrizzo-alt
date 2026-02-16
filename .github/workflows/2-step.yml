@@ -34,7 +34,7 @@ jobs:
         with:
           repository: skills/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.6.0
+          ref: v0.8.1
 
       - name: Update comment - checking work
         run: |
